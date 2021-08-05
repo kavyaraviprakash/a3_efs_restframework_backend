@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_jwt',
     'rest_framework.authtoken',
     'django_filters',
     'corsheaders',
@@ -142,9 +143,9 @@ JWT_AUTH = {
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
 }
 
-CORS_ORIGIN_WHITELIST = (
-    'https://localhost:8080',
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8080',
     'https://127.0.0.1:8080'
-)
+]
 
 CORS_ORIGIN_ALLOW_ALL = True
